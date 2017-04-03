@@ -1,0 +1,1255 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://keyangxiang.com/blog/csv2json/"
+
+    >csvtojson (v1.1.4)</a>
+</h1>
+<h4>A tool concentrating on converting csv data to JSON with customised parser supporting</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csvtojson">module csvtojson</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter">
+            function <span class="apidocSignatureSpan">csvtojson.</span>Converter
+            <span class="apidocSignatureSpan">(params, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csvtojson.</span>Converter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csvtojson.</span>interfaces</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csvtojson.Converter">module csvtojson.Converter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.Converter">
+            function <span class="apidocSignatureSpan">csvtojson.</span>Converter
+            <span class="apidocSignatureSpan">(params, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.super_">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csvtojson.Converter.prototype">module csvtojson.Converter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype._flush">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>_flush
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype._preProcessLines">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>_preProcessLines
+            <span class="apidocSignatureSpan">(lines, startIdx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype._transform">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>_transform
+            <span class="apidocSignatureSpan">(data, encoding, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.checkAndFlush">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>checkAndFlush
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.emitResult">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>emitResult
+            <span class="apidocSignatureSpan">(r)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.fromFile">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>fromFile
+            <span class="apidocSignatureSpan">(filePath, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.fromStream">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>fromStream
+            <span class="apidocSignatureSpan">(readStream, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.fromString">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>fromString
+            <span class="apidocSignatureSpan">(csvString, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.getEol">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>getEol
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.initWorker">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>initWorker
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.preFileLine">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>preFileLine
+            <span class="apidocSignatureSpan">(func)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.preProcessLine">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>preProcessLine
+            <span class="apidocSignatureSpan">(line, lineNumber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.preProcessRaw">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>preProcessRaw
+            <span class="apidocSignatureSpan">(data, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.preRawData">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>preRawData
+            <span class="apidocSignatureSpan">(func)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.prepareData">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>prepareData
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.processData">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>processData
+            <span class="apidocSignatureSpan">(data, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.processHead">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>processHead
+            <span class="apidocSignatureSpan">(fileLine, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.processResult">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>processResult
+            <span class="apidocSignatureSpan">(result)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.setPartialData">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>setPartialData
+            <span class="apidocSignatureSpan">(d)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.transf">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>transf
+            <span class="apidocSignatureSpan">(func)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.workerProcess">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>workerProcess
+            <span class="apidocSignatureSpan">(fileLine, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csvtojson.Converter.prototype.wrapCallback">
+            function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>wrapCallback
+            <span class="apidocSignatureSpan">(cb, clean)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csvtojson" id="apidoc.module.csvtojson">module csvtojson</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter" id="apidoc.element.csvtojson.Converter">
+        function <span class="apidocSignatureSpan">csvtojson.</span>Converter
+        <span class="apidocSignatureSpan">(params, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Converter(params, options) {
+  Transform.call(this, options);
+  _param = defParam(params);
+  this._options = options || {};
+  this.param = _param;
+  this.param._options = this._options;
+  // this.resultObject = new Result(this);
+  // this.pipe(this.resultObject); // it is important to have downstream for a transform otherwise it will stuck
+  this.started = false;//indicate if parsing has started.
+  this.recordNum = 0;
+  this.lineNumber = 0; //file line number
+  this._csvLineBuffer = &#x22;&#x22;;
+  this.lastIndex = 0; // index in result json array
+  //this._pipe(this.lineParser).pipe(this.processor);
+  // this.initNoFork();
+  if (this.param.forked) {
+    this.param.forked = false;
+    this.workerNum = 2;
+  }
+  this.flushCb = null;
+  this.processEnd = false;
+  this.sequenceBuffer = [];
+  this._needJson = null;
+  this._needEmitResult = null;
+  this._needEmitFinalResult = null;
+  this._needEmitJson = null;
+  this._needPush = null;
+  this._needEmitCsv = null;
+  this._csvTransf = null;
+  this.finalResult = [];
+  // this.on(&#x22;data&#x22;, function() {});
+  this.on(&#x22;error&#x22;, emitDone(this));
+  this.on(&#x22;end&#x22;, emitDone(this));
+  this.initWorker();
+  process.nextTick(function () {
+    if (this._needEmitFinalResult === null) {
+      this._needEmitFinalResult = this.listeners(&#x22;end_parsed&#x22;).length &#x3e; 0
+    }
+    if (this._needEmitResult === null) {
+      this._needEmitResult = this.listeners(&#x22;record_parsed&#x22;).length &#x3e; 0
+    }
+    if (this._needEmitJson === null) {
+      this._needEmitJson = this.listeners(&#x22;json&#x22;).length &#x3e; 0
+    }
+    if (this._needEmitCsv === null) {
+      this._needEmitCsv = this.listeners(&#x22;csv&#x22;).length &#x3e; 0
+    }
+    if (this._needJson === null) {
+      this._needJson = this._needEmitJson || this._needEmitFinalResult || this._needEmitResult || this.transform || this._options
+.objectMode;
+    }
+    if (this._needPush === null) {
+      this._needPush = this.listeners(&#x22;data&#x22;).length &#x3e; 0 || this.listeners(&#x22;readable&#x22;).length &#x3e; 0
+      // this._needPush=false;
+    }
+    this.param._needParseJson = this._needJson || this._needPush;
+
+
+  }.bind(this))
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+&#x3e;csvtojson --help
+
+# Params
+
+The constructor of csv Converter allows parameters:
+
+```js
+var converter=new require(&#x22;csvtojson&#x22;).<span class="apidocCodeKeywordSpan">Converter</span>({
+  constructResult:false,
+  workerNum:4,
+  noheader:true
+});
+```
+
+Following parameters are supported:
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csvtojson.Converter" id="apidoc.module.csvtojson.Converter">module csvtojson.Converter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.Converter" id="apidoc.element.csvtojson.Converter.Converter">
+        function <span class="apidocSignatureSpan">csvtojson.</span>Converter
+        <span class="apidocSignatureSpan">(params, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Converter(params, options) {
+  Transform.call(this, options);
+  _param = defParam(params);
+  this._options = options || {};
+  this.param = _param;
+  this.param._options = this._options;
+  // this.resultObject = new Result(this);
+  // this.pipe(this.resultObject); // it is important to have downstream for a transform otherwise it will stuck
+  this.started = false;//indicate if parsing has started.
+  this.recordNum = 0;
+  this.lineNumber = 0; //file line number
+  this._csvLineBuffer = &#x22;&#x22;;
+  this.lastIndex = 0; // index in result json array
+  //this._pipe(this.lineParser).pipe(this.processor);
+  // this.initNoFork();
+  if (this.param.forked) {
+    this.param.forked = false;
+    this.workerNum = 2;
+  }
+  this.flushCb = null;
+  this.processEnd = false;
+  this.sequenceBuffer = [];
+  this._needJson = null;
+  this._needEmitResult = null;
+  this._needEmitFinalResult = null;
+  this._needEmitJson = null;
+  this._needPush = null;
+  this._needEmitCsv = null;
+  this._csvTransf = null;
+  this.finalResult = [];
+  // this.on(&#x22;data&#x22;, function() {});
+  this.on(&#x22;error&#x22;, emitDone(this));
+  this.on(&#x22;end&#x22;, emitDone(this));
+  this.initWorker();
+  process.nextTick(function () {
+    if (this._needEmitFinalResult === null) {
+      this._needEmitFinalResult = this.listeners(&#x22;end_parsed&#x22;).length &#x3e; 0
+    }
+    if (this._needEmitResult === null) {
+      this._needEmitResult = this.listeners(&#x22;record_parsed&#x22;).length &#x3e; 0
+    }
+    if (this._needEmitJson === null) {
+      this._needEmitJson = this.listeners(&#x22;json&#x22;).length &#x3e; 0
+    }
+    if (this._needEmitCsv === null) {
+      this._needEmitCsv = this.listeners(&#x22;csv&#x22;).length &#x3e; 0
+    }
+    if (this._needJson === null) {
+      this._needJson = this._needEmitJson || this._needEmitFinalResult || this._needEmitResult || this.transform || this._options
+.objectMode;
+    }
+    if (this._needPush === null) {
+      this._needPush = this.listeners(&#x22;data&#x22;).length &#x3e; 0 || this.listeners(&#x22;readable&#x22;).length &#x3e; 0
+      // this._needPush=false;
+    }
+    this.param._needParseJson = this._needJson || this._needPush;
+
+
+  }.bind(this))
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+&#x3e;csvtojson --help
+
+# Params
+
+The constructor of csv Converter allows parameters:
+
+```js
+var converter=new require(&#x22;csvtojson&#x22;).<span class="apidocCodeKeywordSpan">Converter</span>({
+  constructResult:false,
+  workerNum:4,
+  noheader:true
+});
+```
+
+Following parameters are supported:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.super_" id="apidoc.element.csvtojson.Converter.super_">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Transform(options) {
+  if (!(this instanceof Transform))
+    return new Transform(options);
+
+  Duplex.call(this, options);
+
+  this._transformState = new TransformState(this);
+
+  var stream = this;
+
+  // start out asking for a readable event once data is transformed.
+  this._readableState.needReadable = true;
+
+  // we have implemented the _read method, and done the other things
+  // that Readable wants before the first _read call, so unset the
+  // sync guard flag.
+  this._readableState.sync = false;
+
+  if (options) {
+    if (typeof options.transform === &#x27;function&#x27;)
+      this._transform = options.transform;
+
+    if (typeof options.flush === &#x27;function&#x27;)
+      this._flush = options.flush;
+  }
+
+  // When the writable side finishes, then flush out anything remaining.
+  this.once(&#x27;prefinish&#x27;, function() {
+    if (typeof this._flush === &#x27;function&#x27;)
+      this._flush(function(er) {
+        done(stream, er);
+      });
+    else
+      done(stream);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csvtojson.Converter.prototype" id="apidoc.module.csvtojson.Converter.prototype">module csvtojson.Converter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype._flush" id="apidoc.element.csvtojson.Converter.prototype._flush">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>_flush
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_flush = function (cb) {
+  var self = this;
+  this.flushCb = function () {
+    self.emit(&#x22;end_parsed&#x22;, self.finalResult);
+    if (self.workerMgr) {
+      self.workerMgr.destroyWorker();
+    }
+    cb()
+    if (!self._needPush) {
+      self.emit(&#x22;end&#x22;)
+    }
+  };
+  if (this._csvLineBuffer.length &#x3e; 0) {
+    if (this._csvLineBuffer[this._csvLineBuffer.length - 1] != this.getEol()) {
+      this._csvLineBuffer += this.getEol();
+    }
+    this.processData(this._csvLineBuffer, function () {
+      this.checkAndFlush();
+    }.bind(this));
+  } else {
+    this.checkAndFlush();
+  }
+  return;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype._preProcessLines" id="apidoc.element.csvtojson.Converter.prototype._preProcessLines">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>_preProcessLines
+        <span class="apidocSignatureSpan">(lines, startIdx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_preProcessLines = function (lines, startIdx) {
+  var rtn = []
+  for (var i = 0; i &#x3c; lines.length; i++) {
+    var result = this.preProcessLine(lines[i], startIdx + i + 1)
+    if (typeof result === &#x22;string&#x22;) {
+      rtn.push(result)
+    } else {
+      rtn.push(lines[i])
+      this.emit(&#x22;error&#x22;, new Error(&#x22;preProcessLine should return a string but got: &#x22; + JSON.stringify(result)))
+    }
+  }
+  return rtn
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype._transform" id="apidoc.element.csvtojson.Converter.prototype._transform">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>_transform
+        <span class="apidocSignatureSpan">(data, encoding, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_transform = function (data, encoding, cb) {
+  if (this.param.toArrayString &#x26;&#x26; this.started === false) {
+    this.started = true;
+    if (this._needPush) {
+      this.push(&#x22;[&#x22; + eol, &#x22;utf8&#x22;);
+    }
+  }
+  data = data.toString(&#x22;utf8&#x22;);
+  var self = this;
+  this.preProcessRaw(data, function (d) {
+    if (d &#x26;&#x26; d.length &#x3e; 0) {
+      self.processData(self.prepareData(d), cb);
+    } else {
+      cb();
+    }
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.checkAndFlush" id="apidoc.element.csvtojson.Converter.prototype.checkAndFlush">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>checkAndFlush
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkAndFlush = function () {
+  if (this._csvLineBuffer.length !== 0) {
+    this.emit(&#x22;error&#x22;, CSVError.unclosed_quote(this.recordNum, this._csvLineBuffer), this._csvLineBuffer);
+  }
+  if (this.param.toArrayString &#x26;&#x26; this._needPush) {
+    this.push(eol + &#x22;]&#x22;, &#x22;utf8&#x22;);
+  }
+  if (this.workerMgr &#x26;&#x26; this.workerMgr.isRunning()) {
+    this.workerMgr.drain = function () {
+      this.flushCb();
+    }.bind(this);
+  } else {
+    this.flushCb();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.emitResult" id="apidoc.element.csvtojson.Converter.prototype.emitResult">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>emitResult
+        <span class="apidocSignatureSpan">(r)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">emitResult = function (r) {
+  var index = r.index;
+  var row = r.row;
+  var result = r.json;
+  var resultJson = null;
+  var resultStr = null;
+  if (typeof result === &#x22;string&#x22;) {
+    resultStr = result;
+  } else {
+    resultJson = result;
+  }
+  if (resultJson === null &#x26;&#x26; this._needJson) {
+    resultJson = JSON.parse(resultStr)
+    if (typeof row === &#x22;string&#x22;) {
+      row = JSON.parse(row)
+    }
+  }
+  if (this.transform &#x26;&#x26; typeof this.transform === &#x22;function&#x22;) {
+    this.transform(resultJson, row, index);
+    resultStr = null;
+  }
+  if (this._needEmitJson) {
+    this.emit(&#x22;json&#x22;, resultJson, index)
+  }
+  if (this._needEmitCsv) {
+    if (typeof row === &#x22;string&#x22;) {
+      row = JSON.parse(row)
+    }
+    this.emit(&#x22;csv&#x22;, row, index)
+  }
+  if (this.param.constructResult &#x26;&#x26; this._needEmitFinalResult) {
+    this.finalResult.push(resultJson)
+  }
+  if (this._needEmitResult) {
+    this.emit(&#x22;record_parsed&#x22;, resultJson, row, index);
+  }
+  if (this.param.toArrayString &#x26;&#x26; index &#x3e; 0 &#x26;&#x26; this._needPush) {
+    this.push(&#x22;,&#x22; + eol);
+  }
+  if (this._options &#x26;&#x26; this._options.objectMode) {
+    this.push(resultJson);
+  } else {
+    if (this._needPush) {
+      if (resultStr === null) {
+        resultStr = JSON.stringify(resultJson)
+      }
+      this.push(!this.param.toArrayString ? resultStr + eol : resultStr, &#x22;utf8&#x22;);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.fromFile" id="apidoc.element.csvtojson.Converter.prototype.fromFile">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>fromFile
+        <span class="apidocSignatureSpan">(filePath, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromFile = function (filePath, cb) {
+  var fs = require(&#x27;fs&#x27;);
+  var rs = null;
+  this.wrapCallback(cb, function () {
+    if (rs &#x26;&#x26; rs.destroy) {
+      rs.destroy();
+    }
+  });
+  fs.exists(filePath, function (exist) {
+    if (exist) {
+      rs = fs.createReadStream(filePath);
+      rs.pipe(this);
+    } else {
+      this.emit(&#x27;error&#x27;, new Error(&#x22;File not exist&#x22;))
+    }
+  }.bind(this));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Or use fromFile convenient function
+
+```js
+//Converter Class
+var Converter = require(&#x22;csvtojson&#x22;).Converter;
+var converter = new Converter({});
+converter.<span class="apidocCodeKeywordSpan">fromFile</span>(&#x22;./file.csv&#x22;,function(err,result){
+
+});
+```
+
+#### From Web
+
+To convert any CSV data from readable stream just simply pipe in the data.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.fromStream" id="apidoc.element.csvtojson.Converter.prototype.fromStream">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>fromStream
+        <span class="apidocSignatureSpan">(readStream, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromStream = function (readStream, cb) {
+  if (cb &#x26;&#x26; typeof cb === &#x22;function&#x22;) {
+    this.wrapCallback(cb);
+  }
+  readStream.pipe(this);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### From CSV Stream
+
+```js
+//const csvReadStream -- Readable stream for csv source
+const csv=require(&#x27;csvtojson&#x27;)
+
+csv()
+.<span class="apidocCodeKeywordSpan">fromStream</span>(csvReadStream)
+.on(&#x27;csv&#x27;,(csvRow)=&#x3e;{
+	// csvRow is an array
+})
+.on(&#x27;done&#x27;,(error)=&#x3e;{
+
+})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.fromString" id="apidoc.element.csvtojson.Converter.prototype.fromString">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>fromString
+        <span class="apidocSignatureSpan">(csvString, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromString = function (csvString, cb) {
+  if (typeof csvString != &#x22;string&#x22;) {
+    return cb(new Error(&#x22;Passed CSV Data is not a string.&#x22;));
+  }
+  if (cb &#x26;&#x26; typeof cb === &#x22;function&#x22;) {
+    this.wrapCallback(cb, function () {
+    });
+  }
+  process.nextTick(function () {
+    this.end(csvString)
+  }.bind(this))
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+#### From String
+
+```js
+var Converter = require(&#x22;csvtojson&#x22;).Converter;
+var converter = new Converter({});
+converter.<span class="apidocCodeKeywordSpan">fromString</span>(csvString, function(err,result){
+  //your code here
+});
+```
+
+### Command Line Tools
+
+&#x3e;csvtojson &#x3c;csv file path&#x3e;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.getEol" id="apidoc.element.csvtojson.Converter.prototype.getEol">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>getEol
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getEol = function (data) {
+  if (!this.param.eol &#x26;&#x26; data) {
+    for (var i = 0; i &#x3c; data.length; i++) {
+      if (data[i] === &#x22;\r&#x22;) {
+        if (data[i + 1] === &#x22;\n&#x22;) {
+          this.param.eol = &#x22;\r\n&#x22;;
+        } else {
+          this.param.eol = &#x22;\r&#x22;;
+        }
+        return this.param.eol;
+      } else if (data[i] === &#x22;\n&#x22;) {
+        this.param.eol = &#x22;\n&#x22;;
+        return this.param.eol;
+      }
+    }
+    this.param.eol = eol;
+  }
+
+  return this.param.eol || eol;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.initWorker" id="apidoc.element.csvtojson.Converter.prototype.initWorker">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>initWorker
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initWorker = function () {
+  var workerNum = this.param.workerNum - 1;
+  if (workerNum &#x3e; 0) {
+    this.workerMgr = workerMgr();
+    this.workerMgr.initWorker(workerNum, this.param);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.preFileLine" id="apidoc.element.csvtojson.Converter.prototype.preFileLine">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>preFileLine
+        <span class="apidocSignatureSpan">(func)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">preFileLine = function (func) {
+  this.preProcessLine = func;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+the function in `preRawData` will be called directly with the string from upper stream.
+
+### CSV File Line Hook
+
+```js
+const csv=require(&#x27;csvtojson&#x27;)
+csv()
+.<span class="apidocCodeKeywordSpan">preFileLine</span>((fileLineString, lineIdx)=&#x3e;{
+	if (lineIdx === 2){
+		return fileLineString.replace(&#x27;some value&#x27;,&#x27;another value&#x27;)
+	}
+	return fileLineString
+})
+.on(&#x27;json&#x27;,(jsonObj)=&#x3e;{
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.preProcessLine" id="apidoc.element.csvtojson.Converter.prototype.preProcessLine">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>preProcessLine
+        <span class="apidocSignatureSpan">(line, lineNumber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">preProcessLine = function (line, lineNumber) {
+  return line;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.preProcessRaw" id="apidoc.element.csvtojson.Converter.prototype.preProcessRaw">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>preProcessRaw
+        <span class="apidocSignatureSpan">(data, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">preProcessRaw = function (data, cb) {
+  cb(data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.preRawData" id="apidoc.element.csvtojson.Converter.prototype.preRawData">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>preRawData
+        <span class="apidocSignatureSpan">(func)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">preRawData = function (func) {
+  this.preProcessRaw = func;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Hook &#x26; Transform
+
+### Raw CSV Data Hook
+
+```js
+const csv=require(&#x27;csvtojson&#x27;)
+csv()
+.<span class="apidocCodeKeywordSpan">preRawData</span>((csvRawData,cb)=&#x3e;{
+	var newData=csvRawData.replace(&#x27;some value&#x27;,&#x27;another value&#x27;)
+	cb(newData);
+})
+.on(&#x27;json&#x27;,(jsonObj)=&#x3e;{
+
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.prepareData" id="apidoc.element.csvtojson.Converter.prototype.prepareData">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>prepareData
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prepareData = function (data) {
+  return this._csvLineBuffer + data;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.processData" id="apidoc.element.csvtojson.Converter.prototype.processData">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>processData
+        <span class="apidocSignatureSpan">(data, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">processData = function (data, cb) {
+  var params = this.param;
+  if (params.ignoreEmpty &#x26;&#x26; !params._headers) {
+    data = data.trimLeft();
+  }
+  var fileLines = fileline(data, this.param)
+  if (fileLines.lines.length &#x3e; 0) {
+    if (this.preProcessLine &#x26;&#x26; typeof this.preProcessLine === &#x22;function&#x22;) {
+      fileLines.lines = this._preProcessLines(fileLines.lines, this.lastIndex)
+    }
+    if (!params._headers) { //header is not inited. init header
+      this.processHead(fileLines, cb);
+    } else {
+      if (params.workerNum &#x3c;= 1) {
+        var lines = fileLineToCSVLine(fileLines, params);
+        this.setPartialData(lines.partial);
+        var jsonArr = linesToJson(lines.lines, params, this.recordNum);
+        this.processResult(jsonArr)
+        this.lastIndex += jsonArr.length;
+        this.recordNum += jsonArr.length;
+        cb();
+      } else {
+        this.workerProcess(fileLines, cb);
+      }
+    }
+  } else {
+    this.setPartialData(fileLines.partial)
+    cb();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.processHead" id="apidoc.element.csvtojson.Converter.prototype.processHead">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>processHead
+        <span class="apidocSignatureSpan">(fileLine, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">processHead = function (fileLine, cb) {
+  var params = this.param;
+  if (!params._headers) { //header is not inited. init header
+    var lines = fileLineToCSVLine(fileLine, params);
+    this.setPartialData(lines.partial);
+    if (params.noheader) {
+      if (params.headers) {
+        params._headers = params.headers;
+      } else {
+        params._headers = [];
+      }
+    } else {
+      var headerRow = lines.lines.shift();
+      if (params.headers) {
+        params._headers = params.headers;
+      } else {
+        params._headers = headerRow;
+      }
+    }
+    if (this.param.workerNum &#x3e; 1) {
+      this.workerMgr.setParams(params);
+    }
+    var res = linesToJson(lines.lines, params, 0);
+    this.processResult(res);
+    this.lastIndex += res.length;
+    this.recordNum += res.length;
+    cb();
+  } else {
+    cb();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.processResult" id="apidoc.element.csvtojson.Converter.prototype.processResult">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>processResult
+        <span class="apidocSignatureSpan">(result)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">processResult = function (result) {
+
+  for (var i = 0; i &#x3c; result.length; i++) {
+    var r = result[i];
+    if (r.err) {
+      this.emit(&#x22;error&#x22;, r.err);
+    } else {
+      this.emitResult(r);
+    }
+  }
+  // this.lastIndex+=result.length;
+  // cb();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.setPartialData" id="apidoc.element.csvtojson.Converter.prototype.setPartialData">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>setPartialData
+        <span class="apidocSignatureSpan">(d)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setPartialData = function (d) {
+  this._csvLineBuffer = d;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.transf" id="apidoc.element.csvtojson.Converter.prototype.transf">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>transf
+        <span class="apidocSignatureSpan">(func)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">transf = function (func) {
+  this.transform = func;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+### Result transform
+
+```js
+const csv=require(&#x27;csvtojson&#x27;)
+csv()
+.<span class="apidocCodeKeywordSpan">transf</span>((jsonObj,csvRow,index)=&#x3e;{
+	jsonObj.myNewKey=&#x27;some value&#x27;
+})
+.on(&#x27;json&#x27;,(jsonObj)=&#x3e;{
+	console.log(jsonObj.myNewKey) // some value
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.workerProcess" id="apidoc.element.csvtojson.Converter.prototype.workerProcess">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>workerProcess
+        <span class="apidocSignatureSpan">(fileLine, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">workerProcess = function (fileLine, cb) {
+  var self = this;
+  var line = fileLine
+  var eol = this.getEol()
+  this.setPartialData(line.partial)
+  this.workerMgr.sendWorker(line.lines.join(eol) + eol, this.lastIndex, cb, function (results, lastIndex) {
+    var cur = self.sequenceBuffer[0];
+    if (cur.idx === lastIndex) {
+      cur.result = results;
+      var records = [];
+      while (self.sequenceBuffer[0] &#x26;&#x26; self.sequenceBuffer[0].result) {
+        var buf = self.sequenceBuffer.shift();
+        records = records.concat(buf.result)
+      }
+      self.processResult(records)
+      self.recordNum += records.length;
+    } else {
+      for (var i = 0; i &#x3c; self.sequenceBuffer.length; i++) {
+        var buf = self.sequenceBuffer[i];
+        if (buf.idx === lastIndex) {
+          buf.result = results;
+          break;
+        }
+      }
+    }
+    // self.processResult(JSON.parse(results),function(){},true);
+  })
+  this.sequenceBuffer.push({
+    idx: this.lastIndex,
+    result: null
+  });
+  this.lastIndex += line.lines.length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csvtojson.Converter.prototype.wrapCallback" id="apidoc.element.csvtojson.Converter.prototype.wrapCallback">
+        function <span class="apidocSignatureSpan">csvtojson.Converter.prototype.</span>wrapCallback
+        <span class="apidocSignatureSpan">(cb, clean)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wrapCallback = function (cb, clean) {
+
+  if (clean === undefined) {
+    clean = function () { }
+  }
+  if (cb &#x26;&#x26; typeof cb === &#x22;function&#x22;) {
+    this.once(&#x22;end_parsed&#x22;, function (res) {
+      if (!this.hasError) {
+        cb(null, res);
+      }
+    }.bind(this));
+  }
+  this.once(&#x22;error&#x22;, function (err) {
+    this.hasError = true;
+    if (cb &#x26;&#x26; typeof cb === &#x22;function&#x22;) {
+      cb(err);
+    }
+    clean();
+  }.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
