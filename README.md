@@ -3,7 +3,7 @@
 
 [![NPM](https://nodei.co/npm/csvtojson.png?downloads=true)](https://www.npmjs.com/package/csvtojson)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-csvtojson/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-csvtojson_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-csvtojson/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-csvtojson/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-csvtojson_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-csvtojson/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-csvtojson/build/screenCapture.npmPackageListing.svg)
 
