@@ -1,6 +1,7 @@
 # npmdoc-csvtojson
 
-api documentation for  [csvtojson (v1.1.4)](http://keyangxiang.com/blog/csv2json/)  [![npm package](https://img.shields.io/npm/v/npmdoc-csvtojson.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-csvtojson) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-csvtojson.svg)](https://travis-ci.org/npmdoc/node-npmdoc-csvtojson)
+#### basic api documentation for  [csvtojson (v1.1.4)](http://keyangxiang.com/blog/csv2json/)  [![npm package](https://img.shields.io/npm/v/npmdoc-csvtojson.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-csvtojson) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-csvtojson.svg)](https://travis-ci.org/npmdoc/node-npmdoc-csvtojson)
+
 #### A tool concentrating on converting csv data to JSON with customised parser supporting
 
 [![NPM](https://nodei.co/npm/csvtojson.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/csvtojson)
